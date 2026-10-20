@@ -64,7 +64,7 @@ export default async function handler(req, res) {
     task = `${productContext}\nLakukan analisis produk dan buat output: 5 hooks yang kuat, masing-masing memakai mekanisme berbeda (curiosity gap yang jujur, relatable, problem-solution, story, atau pertanyaan). Lalu buat tepat ${length} status di threads dengan alur hook -> konteks/masalah -> insight/fitur yang memang diketahui -> pertimbangan atau manfaat relevan -> alasan/objection handling -> CTA, disesuaikan dengan jumlah status. Jangan mengarang pengalaman pribadi penulis. Untuk affiliate, buat rekomendasi yang transparan dan tidak memaksa. Untuk jualan sendiri, ajakan beli tetap natural. CTA ringkas dan sesuai. Jika link disediakan, masukkan link tepat sekali di status terakhir/CTA. Jika informasi produk tidak cukup, jangan buat klaim spesifik; sarankan pengguna menambahkan detail. Disclaimer singkat tentang asumsi/fakta yang perlu diverifikasi.`;
   }
 
-  const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+  const model = 'gemini-3.8-flash';
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(key)}`;
   try {
     const response = await fetch(url, {
