@@ -14,7 +14,7 @@ function send(res, status, data) {
 function clip(v, n) { return typeof v === 'string' ? v.trim().slice(0, n) : ''; }
 function getClientIp(req) { return (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown'; }
 
-module.exports = async function handler(req, res) {
+module.export default async function handler(req, res) {
   if (req.method !== 'POST') return send(res, 405, { error: 'Metode tidak didukung.' });
   const key = process.env.GEMINI_API_KEY;
   if (!key) return send(res, 503, { error: 'GEMINI_API_KEY belum dipasang di backend hosting.' });
