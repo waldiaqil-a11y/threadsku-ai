@@ -1,0 +1,10 @@
+{
+  "name": "threadsku-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered Indonesian Threads copywriting app for sales and affiliate",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": { "node": ">=20" }
+}
